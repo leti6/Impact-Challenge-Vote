@@ -1,4 +1,107 @@
-body{
-    color: white;
+body {
+    color: #3C3C3B;
+    background-color:#F0F0F0;
 }
 
+.page1 .container{
+    padding-top:40px;
+}
+  
+.page1 .navbar-brand{
+    color: rgb(65, 185, 192);
+    text-decoration: none;
+    border: 1px solid rgb(65, 185, 192); 
+    padding:20px;
+    border-radius: 12px;
+}
+
+.page1 .navbar-header a:hover{
+    color:rgb(65, 185, 192); 
+    background-color:#555;
+}
+
+.page1 ul li a{
+    color: #41b9c0;
+    border: 1px solid rgb(65, 185, 192); 
+    padding:20px;
+    border-radius: 12px;
+    text-decoration:none;
+}
+
+.page1 ul li a:hover{
+    color:rgb(65, 185, 192); 
+    background-color:#555;
+}
+
+.page1 .jumbotron {
+    background-color: #41b9c0;
+    margin-top:100px;
+    margin-bottom:100px;
+    border-width:4px;
+    border-style : solid;
+    border-color: #555;
+    border-radius: 12px;
+}
+
+.page1 .jumbotron h1 {
+    text-align: center;
+    color: black;
+    letter-spacing: 8px;
+    line-height: 1.8;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.329);
+}
+
+.page1 p.lead{
+    text-align: center;
+    padding-top:28px;
+    color: white; 
+    font-style: bold;
+    font-style: italic;
+    font-size:28px;
+
+}
+.page1 .jumbotron .date{
+    text-align: center;
+    color: black;
+    font-size:22px;
+    font-style: bold;
+    text-transform: uppercase;
+    padding-top:18px;
+
+
+}
+.page1 .row{
+    text-align: center;
+    margin-bottom:100px;
+}
+
+.page1 .btn-primary {
+    color:#555;
+    font-size:20px;
+    background-color:#fff;
+    width:340px;
+    border: 1px solid rgb(65, 185, 192); 
+    padding:100px;
+    border-radius: 12px; 
+}
+
+.page1 .col-lg-4 p a :hover{
+    color:rgb(65, 185, 192); 
+    background-color:#555;
+}
+
+.page1 .col-lg-4{
+    margin-right: 80px;
+    margin-left:80px;
+}
+
+.page1 .footer {
+   padding:30px;
+    background-color: #555;
+    margin: auto 0;
+}
+
+.page1 .footer p {
+    color: #fff;
+   
+}
