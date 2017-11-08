@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
   </head>
 
   <body class="page1">
@@ -20,7 +22,8 @@
         <nav class="navbar navbar-defaultnavbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">SHARIFY</a>
+                <a class="navbar-brand" href="http://sharify.be/fr/home-fr/">
+                <img class= "logo" src="images/Logo_Shar.jpg" alt=""></a>
          </div>
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -28,47 +31,69 @@
             </li>
          </ul>
         </div>
+        <div class= "illu_container">
+          <img class= "img1" src="images/idea1.png" alt="">
+          <img class="img2" src="images/fleche3.png" alt="">
+          <img class="img3" src="images/idea_bloc.png" alt="">
+          <img class="img4" src="images/fleche3.png" alt="">
+          <img class= "img5" src="images/development.png" alt="">
+        </div>
         </nav>
       </header>
 
       <main role="main">
 
         <!-- Jumbotron -->
-        <div class="jumbotron">
+        <div class="jumbotron" class="jumbotron_custom">
           <h1>IMPACT CHALLENGE 2017</h1>
           <p class="lead">Sharing ideas and expertise to perfom <br> in the start-up entrepreunarial field</p>
           <p class= "date">Brussels 24-26 November </p>
 
           
         </div>
+        <div class="roue">
+          <img class="roue_anim" src="images/roue2.png" alt="">
+          <img class="roue_anim2"src="images/roue2.png" alt="">
+          <img class="roue_anim3"src="images/roue2.png" alt="">
+          <img class="roue_anim4"src="images/roues.png" alt="">
+          <img class="roue_anim3"src="images/roue2.png" alt="">
+          <img class="roue_anim2" src="images/roue2.png" alt="">
+          <img class="roue_anim" src="images/roue2.png" alt="">
+          
+        </div>
 
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-lg-4">
-            <p><a class="btn btn-primary" href="http://getbootstrap.com/docs/4.0/examples/justified-nav/#" role="button">JURY VOTE</a></p>
-          </div>
-          <div class="col-lg-4">
-            <p><a class="btn btn-primary" href="http://getbootstrap.com/docs/4.0/examples/justified-nav/#" role="button">VOTING RESULTS</a></p>
-          </div>
+
+                <a class= "btn-primary" href="Projetcs-Global.html">JURY VOTE</a>
+                <a class= "btn-primary" href="result.html">VOTING RESULTS</a>
+               
         </div>
 
+        <div class="autoplay">
+          <div><img class= "img_car" src="images/Partners/1819.png" /></div>
+          <div><img class= "img_car" src="images/Partners/BOCO.png" /></div>
+          <div><img class= "img_car"  src="images/Partners/1819/EHB.png" /></div>
+          <div><img class= "img_car"  src="images/Partners/region_de_bruxelles_capitale.png" /></div>
+          <div><img class= "img_car"  src="images/Partners/UStart.png"/> </div>
+          <div><img class= "img_car" src="images/Partners/YET.png" /></div>
+        </div>
+        
       </main>
 
       <!-- Site footer -->
-      <footer class="footer">
-        <p>© Sharify 2017</p>
-      </footer>
+   
 
     </div> <!-- /container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Justified Nav Template for Bootstrap_files/jquery-3.2.1.slim.min.js.téléchargement" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./Justified Nav Template for Bootstrap_files/popper.min.js.téléchargement"></script>
-    <script src="./Justified Nav Template for Bootstrap_files/bootstrap.min.js.téléchargement"></script>
+    <footer class="footer">
+        <p>© Sharify 2017</p>
+      </footer>
   
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="scripts/app.js"></script>
 
-</body></html>
+
+</body>
+</html>
