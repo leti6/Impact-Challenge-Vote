@@ -30,10 +30,117 @@ right: 10px;
 }
 
 body {
-    background-color: rgb(181, 191, 197);
+    background-color: #F0F0F0;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    line-height: 24px;
+    /* line-height: 24px; */
     color: #555!important;
     font-weight: 400;
 }
+
+.vote .project-name {
+    background-color: #fefefe;
+    margin-top:20px;
+    margin-bottom:50px;
+    border-width:1px;
+    border-style : solid;
+    border-color: #555;
+    border-radius: 12px;
+    padding: 10px;
+    width: 80%;
+}
+
+.vote .box-vote {
+    background-color: #fefefe;
+    margin: 10px;
+    padding: 20px;
+    width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    
+}
+
+#hide {
+    display:none;
+}
+
+.vote .criteria {
+    position: relative;
+}
+ 
+/* rating est la classe du vote radio global  */
+
+.vote .rating {
+    overflow: hidden;
+    position: inline-block;
+    font-size: 16px;
+
+}
+/* rating-value est la classe de l'input radio */
+
+.rating-value {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+}
+
+/* select-star est la classe du label  */
+
+
+.select-star,
+.rating:hover .rating-value 
+{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('doublestar.png') 0 -16px;
+    background-size: cover;
+}
+
+.vote .rating:hover .select-star:hover,
+.rating:hover .select-star:hover ~ .select-star,
+.rating-value:checked ~ .select-star {
+    background-position: 0 0;
+}
+
+.vote .rating p {
+    display: inline;
+    margin: 10%;
+}
+
+.vote #overall {
+    display: inline;
+margin: 5%;
+padding: 10% 5%;
+}
+
+.vote #overall-rating {
+    display: inline-block;
+    border-radius: 10%;
+    background: #41b9c0;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.vote .turquoise {
+    color: #41b9c0;
+}
+
+.vote .progress {
+    width: 50%;
+    background: white;
+}
+
+.vote .title-progressbar {
+    color: rgb(31, 78, 206);
+    font-size: 18px;
+  
+}
+
