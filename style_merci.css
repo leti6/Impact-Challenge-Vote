@@ -2,6 +2,7 @@ body {
     color: #3C3C3B;
     background-color: #F0F0F0;
     width:100%;
+    margin:0 auto;
 }
 
 .merci .logo{
@@ -9,42 +10,60 @@ body {
     border: 1px solid rgb(65, 185, 192); 
     /* padding:20px; */
     border-radius: 12px;
+    float:left;
 }
 
+.container{
+    padding-top:20px;
+}
 
-.merci .container{
+/* .merci .container{
     padding-top:20px;
     margin:0 auto;
     width:80%;
     text-align: center; 
+} */
+
+.container-fluid{
+    margin-bottom:200px;
+    margin:0 auto;
+    padding-top:20px;
+    width:80%;
+    text-align: center; 
 }
 
-
+.merci .contenu{
+    margin-bottom:100px;
+    margin:0 auto;
+    padding-top:20px;
+    width:80%;
+    text-align: center; 
+}
+.texte p {
+    text-align: center; 
+}
 .footer{
     /* padding-bottom: 20px; */
     width:95%;
-    margin-top:50px;
-    position:relative;
-    bottom:5px;
+    margin-top:5%;
+    left:0;
+    right:0;
 }
     
 
 .footer p {
     margin-left: 40px;
-    position:relative;
-    bottom:5px;
+    float:left;
 }
 
 #back-menu {
-    position:relative;
-    bottom:15px;;
-    float: right;
     padding:10px;
+    float:right;
 }
 
 
 img.mySlides {
-    width:200px;
+    width:160px;
 }
 
 .merci .contenu {
@@ -65,3 +84,63 @@ img.mySlides2 {
 .container img{
     width:200px;
 }
+
+
+.roue img{
+    /* margin:10px; */
+    width:22px;
+    height:22px;
+} 
+
+
+@keyframes roue {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+.roue_anim{
+    animation: roue 10s infinite;
+}
+
+.roue_anim2{
+    animation: roue2 6s infinite;
+}
+
+.roue_anim3{
+    animation: roue3 4s infinite;
+}
+
+.roue_anim4{
+    animation: roue4 6s infinite;
+}
+
+@keyframes roue2 {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(280deg);
+      }
+  }
+
+  @keyframes roue3 {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(320deg);
+      }
+  }
+
+  @keyframes roue4 {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(320deg);
+      }
+  }
