@@ -111,6 +111,12 @@ h2.titre_noir{
     right: 5px;
 }
 
+.list-projects .XdeleteButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
 #back-menu {
     position:relative;
     bottom:15px;;

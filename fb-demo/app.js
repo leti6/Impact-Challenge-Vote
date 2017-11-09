@@ -3,7 +3,20 @@
  */
 
 // Exemple pour écrire à un chemin précis
-firebase.database().ref('/demo/information/title').set("Hello, this is a test title");
+//firebase.database().ref('/demo/information/title').set("Hello, this is a test title");
+
+
+
+
+
+
+
+
+
+
+
+
+//firebase.database().ref('/demo/information/mytest').set("This is my first test");
 
 // Créer des projets
 const informationsProjet = {
@@ -11,9 +24,7 @@ const informationsProjet = {
   description: 'This is also a test project',
   team: 'Laura, Léti'
 }
-// setTimeout(function(){
-//   firebase.database().ref('/demo/projects').push(informationsProjet)
-// }, 4000);
+
 
 // Lire les projets
 function handleProjects(data){
@@ -34,17 +45,17 @@ function handleProjects(data){
   }
   projectContainer.innerHTML = resultat;
 }
-// À chaque nouvelle valeur dans la datbase sur demo/porjects on appelle handleProjects
-firebase.database().ref('/demo/projects').on('value', handleProjects);
+// À chaque nouvelle valeur dans la datbase sur demo/porjects on appelle handleProjects//
+//firebase.database().ref('/demo/projects').on('value', handleProjects);
 
 
 
 
 
 
-function getRandom5(){
-  return Math.floor(Math.random()  * 5);
-}
+// function getRandom5(){
+//   return Math.floor(Math.random()  * 5);
+// }
 
 /**
  * Exemple Encodage Notes
@@ -63,6 +74,7 @@ const projectId = "-KyR1ISSR8osJhPNdsiJ";
 // Ecriture sur un projet
 // firebase.database().ref('/demo/resultats/' + projectId).push(resultat);
 
+//firebase.database().ref('/demo/information/title' + projectId).push(resultat);
 
 
 
@@ -83,4 +95,4 @@ function handleMoyenne(data){
 
   console.log(valeurs);
 }
-firebase.database().ref('/demo/resultats/' + projectId).on('value', handleMoyenne);
+//firebase.database().ref('/demo/resultats/' + projectId).on('value', handleMoyenne);
