@@ -156,7 +156,7 @@
     float: right;
   }
   .slick-slide img {
-    display: block;
+    display: inline-block;
   }
   .slick-slide.slick-loading img {
     display: none;
@@ -165,13 +165,13 @@
     pointer-events: none;
   }
   .slick-initialized .slick-slide {
-    display: block;
+    display: inline-block;
   }
   .slick-loading .slick-slide {
     visibility: hidden;
   }
   .slick-vertical .slick-slide {
-    display: block;
+    display: inline-block;
     height: auto;
     border: 0;
     outline: none;
@@ -215,7 +215,7 @@
    */
   .hero__title .slick-current > span {
     box-sizing: border-box;
-    display: block;
+    display: inline-block;
   }
   
   .no-js .hero__title .slick-dupe:nth-child(2) > span {
@@ -223,7 +223,7 @@
   }
   
   .hero__title-misc {
-    display: block;
+    display: inline-block;
     font-size: 24px;
     font-weight: bold;
     color: grey;
