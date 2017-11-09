@@ -101,21 +101,19 @@ const newProject = firebase.database().ref('/demo/projects').on('value', showAll
     let ref = firebase.database().ref('/demo/projects/' + key).remove();
   }
 
-
+ 
 
   function SaveVoteJury (event) {
+    event.preventDefault()
 
     const projectId = getQueryVariable('projectId'); 
+    console.log(projectId)   
 
     const resultatVoteJury = {
-        user_Centricity: "",
-        differentiation: "",
-        profitability: "",
-        scalability: "",
-        technology_Integration: "",
-        technology_evolution: "",
-        Resource_to_Impact: "",
-        Impact_potential: "",
+        Differentiation: "",
+        Viability: "",
+        Feasability: "",
+        Impact: "",
         Overall_Rating: ""
     }
 
@@ -127,33 +125,47 @@ const newProject = firebase.database().ref('/demo/projects').on('value', showAll
     const radioTechEvolution = $('[name=radioTechEvolution]:checked');
     const radioResource = $('[name=radioResource]:checked');
     const radioImpactPotential = $('[name=radioImpactPotential]:checked');
-    
-    resultatVoteJury.user_Centricity = Number(radioCentricity.val())
-    resultatVoteJury.differentiation = Number(radioDifferentiation.val())
-    resultatVoteJury.profitability = Number(radioProfitability.val())
-    resultatVoteJury.scalability = Number(radioScalability.val())
-    resultatVoteJury.technology_Integration = Number(radioTechIntegration.val())
-    resultatVoteJury.technology_evolution = Number(radioTechEvolution.val())
-    resultatVoteJury.Resource_to_Impact = Number(radioResource.val())
-    resultatVoteJury.Impact_potential = Number(radioImpactPotential.val())
 
-    let moyenneDesirability = (Number(radioCentricity.val()) + Number(radioDifferentiation.val()))/2
+     let moyenneDesirability = (Number(radioCentricity.val()) + Number(radioDifferentiation.val()))/2
     let moyenneViability = (Number(radioProfitability.val()) + Number(radioScalability.val()))/2
     let moyenneFeasability = (Number(radioTechIntegration.val()) + Number(radioTechEvolution.val()))/2
     let moyenneImpact = (Number(radioResource.val()) + Number(radioImpactPotential.val()))/2
-    let calculOverall = (moyenneDesirability + moyenneViability + moyenneFeasability + moyenneImpact)/2
+    let calculOverall = (moyenneDesirability + moyenneViability + moyenneFeasability + moyenneImpact)/2  
 
+    resultatVoteJury.Differentiation = moyenneDesirability
+    resultatVoteJury.Viability = moyenneViability
+    resultatVoteJury.Feasability = moyenneFeasability
+    resultatVoteJury.Impact = moyenneImpact
     resultatVoteJury.Overall_Rating = calculOverall
-
 
 
     console.log(resultatVoteJury)
     
-    
 
 
-    //firebase.database('/demo/resultats/' + projectId).push(resultatVoteJury)
-event.preventDefault()
+    firebase.database().ref('/demo/resultats/' + projectId).push(resultatVoteJury)
   }
 
   $('#form-vote').on('submit', SaveVoteJury)
+
+//   const resultatVoteJury = {
+//     user_Centricity: "",
+//     differentiation: "",
+//     profitability: "",
+//     scalability: "",
+//     technology_Integration: "",
+//     technology_evolution: "",
+//     Resource_to_Impact: "",
+//     Impact_potential: "",
+//     Overall_Rating: ""
+// }
+
+
+// resultatVoteJury.user_Centricity = Number(radioCentricity.val())
+// resultatVoteJury.differentiation = Number(radioDifferentiation.val())
+// resultatVoteJury.profitability = Number(radioProfitability.val())
+// resultatVoteJury.scalability = Number(radioScalability.val())
+// resultatVoteJury.technology_Integration = Number(radioTechIntegration.val())
+// resultatVoteJury.technology_evolution = Number(radioTechEvolution.val())
+// resultatVoteJury.Resource_to_Impact = Number(radioResource.val())
+// resultatVoteJury.Impact_potential = Number(radioImpactPotential.val())
