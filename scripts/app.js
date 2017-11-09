@@ -180,6 +180,63 @@ const newProject = firebase.database().ref('/demo/projects').on('value', showAll
     firebase.database().ref('/demo/resultats/' + projectId).push(resultatVoteJury)
   }
 
+function moyenneVotesProjet (key) {
+  let resultats = firebase.database().ref('/demo/resultats/'+key);
+  let sommeDifferentiation = 0;
+  let sommeViability = 0;
+  let sommeFeasability = 0;
+  let sommeImpact = 0;
+  let sommeOverall = 0;
+
+  for(let key in resultats){
+      sommeDifferentiation+=resultats[key].Differentiation;
+      sommeViability+=resultats[key].Viability;
+      sommeFeasability+=resultats[key].Feasability;
+      sommeImpact+=resultats[key].Impact;
+      sommeOverall+=resultats[key].Overall_Rating;
+  }
+  let moyennes = 
+  {
+    moyennetDifferentiationTotal: sommeDifferentiation/resultats.length,
+    moyennetViabilityTotal : sommeViability/resultats.length,
+    moyennetFeasabilityTotal : sommeFeasability/resultats.length,
+    moyennetImpactTotal : sommeImpact/resultats.length,
+    moyenneOverallTotal : sommeOverall/resultats.length
+  }
+
+  return moyennes;
+
+}
+
+function createTab(){
+    const body = $("#tbody");
+
+    const projects = firebase.database().ref('/demo/projects/'+key);
+
+    for(let key in projects){
+        projects[key].title
+
+    const newRow = $('<tr>');
+    const tdTitle = $('<td>');
+    const tdOverall = $('<td>');
+    const tdDifferentiation = $('<td>');
+    const tdViability = $('<td>');
+    const tdFeasability = $('<td>');
+    const tdImpact = $('<td>');
+
+        let resultats = firebase.database().ref('/demo/resultats/' + key);
+        let moyennes = moyenneVotesProjet(key)
+
+        tdTitle.html()
+        tdOverall.html(moyennes[key].moyenneOverallTotal)
+        tdDifferentiation.html(moyennes[key].moyennetDifferentiationTotal)
+
+        newRow.append(newTd)
+    }
+}
+
+$('#result-btn').click(moyenneVotesProjet)
+
   $('#form-vote').on('submit', SaveVoteJury)
 
 //   const resultatVoteJury = {
