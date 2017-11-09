@@ -24,6 +24,12 @@
     right: 5px;
 }
 
+.list-projects .XdeleteButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
 #back-menu {
 
 right: 10px;

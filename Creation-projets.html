@@ -12,29 +12,43 @@
 <body class = "creation">
 
     <h2> Créer un nouveau projet :</h2>
-    <form action="">
+    <br>
+    <form id= "creation-form" action="">
         <div class="container">
         <label for="title"> Project name: </label>
-        <input type="text" name = "title" placeholder= "enter new project name" size = "50">
+        <input type="text" id = "creation-input-title" name = "title" placeholder= "enter new project name" size = "50">
         <br>
         <br>
         <label for="description"> Project description: </label> <br>
-        <textarea type="text" name = "description" rows= "4" cols = "50" placeholder= "enter 1-sentence description"> </textarea>
+        <textarea type="text" id = "creation-input-description" name = "description" rows= "4" cols = "50" placeholder= "enter 1-sentence description"> </textarea>
         <br>
         <br>
         <label for="team"> Project team members: </label> <br>
-        <textarea type="text" name = "team" placeholder ="enter team members names" rows= "4" cols = "50"> </textarea>
+        <textarea type="text" id = "creation-input-team" name = "team" placeholder ="enter team members names" rows= "4" cols = "50"> </textarea>
         <br> 
         <br>
 
-        <input type="text" class="submit" value = "Submit" class = "btn-primary">
-    </div>
-    </form>
+        <input type="submit" value = "submit" class = "btn-primary">
 
-    <script src="./Justified Nav Template for Bootstrap_files/jquery-3.2.1.slim.min.js.téléchargement" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./Justified Nav Template for Bootstrap_files/popper.min.js.téléchargement"></script>
-    <script src="./Justified Nav Template for Bootstrap_files/bootstrap.min.js.téléchargement"></script>
+    </div>
+    </form>  
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAU6t0D3Z4Fh7w2AHa-3a2mL1NPI6E9b6I",
+        authDomain: "vote-impact-challenge-2017.firebaseapp.com",
+        databaseURL: "https://vote-impact-challenge-2017.firebaseio.com",
+        projectId: "vote-impact-challenge-2017",
+        storageBucket: "vote-impact-challenge-2017.appspot.com",
+        messagingSenderId: "108861974779"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
     <script src="scripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/app.js"></script>
