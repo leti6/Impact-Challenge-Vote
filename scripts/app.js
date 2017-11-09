@@ -207,31 +207,33 @@ function moyenneVotesProjet (key) {
   return moyennes;
 
 }
-
+ createTab();
 function createTab(){
     const body = $("#tbody");
-
-    const projects = firebase.database().ref('/demo/projects/'+key);
+    const projects = firebase.database().ref('/demo/projects');
 
     for(let key in projects){
-        projects[key].title
 
-    const newRow = $('<tr>');
-    const tdTitle = $('<td>');
-    const tdOverall = $('<td>');
-    const tdDifferentiation = $('<td>');
-    const tdViability = $('<td>');
-    const tdFeasability = $('<td>');
-    const tdImpact = $('<td>');
+        const newRow = $('<tr>');
+        const tdTitle = $('<td>');
+        const tdOverall = $('<td>');
+        const tdDifferentiation = $('<td>');
+        const tdViability = $('<td>');
+        const tdFeasability = $('<td>');
+        const tdImpact = $('<td>');
 
-        let resultats = firebase.database().ref('/demo/resultats/' + key);
         let moyennes = moyenneVotesProjet(key)
 
-        tdTitle.html()
-        tdOverall.html(moyennes[key].moyenneOverallTotal)
-        tdDifferentiation.html(moyennes[key].moyennetDifferentiationTotal)
+        tdTitle.text(projects[key].title)
+        tdOverall.text(moyennes.moyenneOverallTotal)
+        tdDifferentiation.text(moyennes.moyennetDifferentiationTotal)
+        tdViability.text(moyennes.moyennetViabilityTotal)
+        tdFeasability.text(moyennes.moyennetFeasabilityTotal)
+        tdImpact.text(moyennes.moyennetImpactTotal)
 
-        newRow.append(newTd)
+        body.append(newRow)
+        
+        newRow.append(tdTitle, tdOverall, tdDifferentiation, tdViability, tdFeasability, tdImpact)
     }
 }
 
