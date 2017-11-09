@@ -1,0 +1,67 @@
+body {
+    color: #3C3C3B;
+    background-color: #F0F0F0;
+    width:100%;
+}
+
+.merci .logo{
+    width:120px;
+    border: 1px solid rgb(65, 185, 192); 
+    /* padding:20px; */
+    border-radius: 12px;
+}
+
+
+.merci .container{
+    padding-top:20px;
+    margin:0 auto;
+    width:80%;
+    text-align: center; 
+}
+
+
+.footer{
+    /* padding-bottom: 20px; */
+    width:95%;
+    margin-top:50px;
+    position:relative;
+    bottom:5px;
+}
+    
+
+.footer p {
+    margin-left: 40px;
+    position:relative;
+    bottom:5px;
+}
+
+#back-menu {
+    position:relative;
+    bottom:15px;;
+    float: right;
+    padding:10px;
+}
+
+
+img.mySlides {
+    width:200px;
+}
+
+.merci .contenu {
+    margin:0 auto;
+}
+
+.merci .contenu .texte{
+    margin:0 auto;
+    text-align:center;
+    font-size:20px;
+    border: 2px solid black; 
+}
+
+img.mySlides2 {
+    width:200px;
+}
+
+.container img{
+    width:200px;
+}
