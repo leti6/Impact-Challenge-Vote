@@ -11,6 +11,9 @@
     /* padding:20px; */
     border-radius: 12px;
 }
+.container{
+    padding-top:20px;
+}
 
 .pageresult .illu_container{
     width:100%;
