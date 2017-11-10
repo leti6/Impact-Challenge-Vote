@@ -90,6 +90,8 @@ function SaveVoteJury (event) {
 
     //console.log(resultatVoteJury)
     firebase.database().ref('/demo/resultats/' + projectId).push(resultatVoteJury)
+
+    window.location.replace("../Projects_list.html");
 }
 
 $('#form-vote').on('submit', SaveVoteJury)

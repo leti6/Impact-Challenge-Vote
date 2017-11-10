@@ -87,6 +87,18 @@
 }
 .pageresult td{
     text-align :center;
+    font-size:18px;
+    font-weight:bold;
+    font-family: inherit;
+    border:1px solid black;
+    padding:16px;
+}
+
+.pageresult th.titre_projet{
+margin:20px;
+width:50%;
+
+
 }
 .pageresult th{
     border:1px solid black;
@@ -94,7 +106,7 @@
 }
 .pageresult table {
     width:90%;
-    height:570px;
+    /* height:570px; */
 }
 
 th.resultattotal {
