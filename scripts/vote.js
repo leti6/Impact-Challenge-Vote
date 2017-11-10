@@ -1,11 +1,8 @@
 
-
-
-
 function handleChange(){
     const numberOfStars = $('input[type=radio]:checked').length;
-    numberOfStars/8
-    //$('#progressbar').css('width', Math.floor(numberOfStars / 8) * 100 + "%")
+    let progress = Math.floor(12.5 * numberOfStars);
+    $('#progressbar').css('width', progress + "%");
 }
 
 $('input[type=radio]').on('change', handleChange);
