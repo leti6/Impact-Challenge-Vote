@@ -45,7 +45,7 @@
 </div>
 
 <div class"contenu">
-<form action="">
+<form id ="form-vote" action="">
 
 <div class="box-vote">
     <div class="criteria">
@@ -244,10 +244,23 @@
      
     </footer>
 </div>
-
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAU6t0D3Z4Fh7w2AHa-3a2mL1NPI6E9b6I",
+    authDomain: "vote-impact-challenge-2017.firebaseapp.com",
+    databaseURL: "https://vote-impact-challenge-2017.firebaseio.com",
+    projectId: "vote-impact-challenge-2017",
+    storageBucket: "vote-impact-challenge-2017.appspot.com",
+    messagingSenderId: "108861974779"
+  };
+  firebase.initializeApp(config);
+</script>
 <script
 src="https://code.jquery.com/jquery-3.2.1.js"
 integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 crossorigin="anonymous"></script>
 <script src="scripts/vote.js"></script>
+<script src="scripts/app.js"></script>
 </body></html>
