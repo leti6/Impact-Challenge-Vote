@@ -86,6 +86,7 @@ const newProject = firebase.database().ref('/demo/projects').on('value', showAll
     let key = $(this).parent().prop("id");
     console.log(key);
     let ref = firebase.database().ref('/demo/projects/' + key).remove();
+     ref = firebase.database().ref('/demo/resultats/' + key).remove();
   }
 
  
