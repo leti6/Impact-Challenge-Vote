@@ -207,13 +207,13 @@ function moyenneVotesProjet (key) {
   return moyennes;
 
 }
- createTab();
-function createTab(){
+
+function createTab(val){
+
     const body = $("#tbody");
     const projects = firebase.database().ref('/demo/projects');
 
     for(let key in projects){
-
         const newRow = $('<tr>');
         const tdTitle = $('<td>');
         const tdOverall = $('<td>');
