@@ -33,7 +33,6 @@ function CreateProject (event) {
     firebase.database().ref('/demo/projects').push(newProject);
 
     console.log(newProject)
-    window.location.replace("../Projetcs-Global.html");
 }
   
 $('#creation-form').on('submit', CreateProject)
@@ -50,11 +49,8 @@ function showAllProjects (data) {
         const boxTitle = $('<h2>').addClass('box-title');
         const newPDescription =$('<p>').addClass('box-description');
         const newPTeam = $('<p>').addClass('box-team');
-        const CreaVoteButton = '<a class="btn btn-primary" href="Creation-projets.html" role="button">Create New Project</a>'
-        
-        const XdeleteButton = $('<button>').addClass("XdeleteButton", "btn btn-secondary").prop("type","button").text("x");
-
-        XdeleteButton.click(deleteTheProject);
+        const CreaVoteButton = '<a class="btn btn-primary" href="/vote.html?projectId=' + key + '" role="button">Vote here</a>'
+    
       
         boxTitle.text(data.val()[key].title);
         
@@ -70,8 +66,7 @@ function showAllProjects (data) {
             boxTitle,
             newPDescription,
             newPTeam,
-            CreaVoteButton,
-            XdeleteButton)
+            CreaVoteButton)
         
             
         console.log(div)
@@ -87,9 +82,4 @@ const newProject = firebase.database().ref('/demo/projects').on('value', showAll
     let key = $(this).parent().prop("id");
     console.log(key);
     let ref = firebase.database().ref('/demo/projects/' + key).remove();
-     ref = firebase.database().ref('/demo/resultats/' + key).remove();
   }
-
- 
-
-  
