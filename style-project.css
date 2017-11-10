@@ -111,12 +111,6 @@ h2.titre_noir{
     position: relative;
 }
 
-.list-projects .btn-primary {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-}
-
 .list-projects .XdeleteButton {
     position: absolute;
     top: 5px;
@@ -250,11 +244,14 @@ body {
 }
 
 .vote .progress {
-    width: 60%;
+    width: 70%;
     background: white;
     margin:0 auto;
-
 }
+.bg-success{
+    color: #41b9c0!important;
+}
+
 
 .vote .title-progressbar {
     color: white;
@@ -279,9 +276,35 @@ body {
     position:relative;
     padding-right:30px;
     padding-left:30px;
-    left:20%;
+    left:80%;
     
 }
+
+.submit{
+    text-align: center;
+    margin:0 auto;
+}
+.btn-primary-submit{
+    background-color:#fff;
+    /* width:40%; */
+    border: 1px solid #555;
+    color: #41b9c0;
+    border-radius: 12px; 
+    margin: 0 auto;
+    padding-right:30px;
+    padding-left:30px;
+    padding-bottom:12px;
+    padding-top: 12px;
+    font-size:20px;
+    text-align: center;
+    /* position:relative;
+    padding-right:30px;
+    padding-left:30px;
+    left:85%; */
+}
+
+
+
 
  /* a.btn-primary {
     font-size:22px;
@@ -301,5 +324,31 @@ body {
 }
 
 .footer p {
-    margin-left: 40px;
+  
+    font-size:18px;
+    font-weight: bold;
+}
+
+.click_merci{
+    /* display:inline-block; */
+    text-align:center;
+    margin:0 auto; 
+}
+
+
+a.page_merci {
+    padding:18px;
+    background-color:#fff;
+    /* width:40%; */
+    border: 1px solid #555;
+    color: #41b9c0;
+    border-radius: 12px; 
+    font-size:16px;
+    text-decoration: none;
+    font-weight: bold;
+  
+}
+
+a.page_merci:hover{
+    background-color:#555;
 }
