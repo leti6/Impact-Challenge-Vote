@@ -50,7 +50,7 @@ function showAllProjects (data) {
         const boxTitle = $('<h2>').addClass('box-title');
         const newPDescription =$('<p>').addClass('box-description');
         const newPTeam = $('<p>').addClass('box-team');
-        const CreaVoteButton = '<a class="btn btn-primary" href="Creation-projets.html" role="button">Create New Project</a>'
+        
         
         const XdeleteButton = $('<button>').addClass("XdeleteButton", "btn btn-secondary").prop("type","button").text("x");
 
@@ -70,7 +70,6 @@ function showAllProjects (data) {
             boxTitle,
             newPDescription,
             newPTeam,
-            CreaVoteButton,
             XdeleteButton)
         
             

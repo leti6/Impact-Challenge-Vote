@@ -12,6 +12,15 @@ body {
     border-radius: 12px;
 }
 
+.page1 .logoPartner{
+    width:120px;
+    border: 1px solid rgb(65, 185, 192); 
+    /* padding:20px; */
+    padding: 12px 0px;
+    border-radius: 12px;
+    background-color: white;
+}
+
   
 /* .page1 .navbar-brand{
     color: rgb(65, 185, 192);
