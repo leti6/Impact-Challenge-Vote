@@ -63,7 +63,8 @@ function SaveVoteJury (event) {
         Viability: "",
         Feasability: "",
         Impact: "",
-        Overall_Rating: ""
+        Overall_Rating: "",
+        name: localStorage.getItem('name')
     }
 
     const radioCentricity = $('[name=radioUserCentricity]:checked');
@@ -89,7 +90,7 @@ function SaveVoteJury (event) {
 
 
     //console.log(resultatVoteJury)
-    firebase.database().ref('/demo/resultats/' + projectId).push(resultatVoteJury)
+    firebase.database().ref('/demo/resultats/' + projectId + '/' + localStorage.getItem('name')).set(resultatVoteJury)
 
     window.location.replace("../Projects_list.html");
 }

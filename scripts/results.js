@@ -35,6 +35,13 @@ function moyenneVotesProjet (project) {
   return moyennes;
 
 }
+
+function getNames(projet){
+    let names = new Set();
+    Object.values(projet).forEach(({name}) => names.add(name));
+    return names;
+}
+
 let writting = false;
 async function createTab (data){
     if(writting){
@@ -50,7 +57,9 @@ async function createTab (data){
         const moyennes = moyenneVotesProjet(projects[projectKey]);
         const infoProject = await firebase.database().ref('/demo/projects/' + projectKey + '/title').once('value');
         const titre = infoProject.val();
+        const namesSet = getNames(projects[projectKey]);
 
+        let names = Array.from(namesSet).join('; ');
             
             const newRow = $('<tr>');
             const tdTitle = $('<td>');
@@ -59,7 +68,9 @@ async function createTab (data){
             const tdViability = $('<td>');
             const tdFeasability = $('<td>');
             const tdImpact = $('<td>');
+            const tdVotes = $('<td>');
     
+            tdVotes.text(names);
             tdTitle.text(titre)
             tdOverall.text(moyennes.moyenneOverallTotal)
             tdDifferentiation.text(moyennes.moyennetDifferentiationTotal)
@@ -69,7 +80,7 @@ async function createTab (data){
     
             body.append(newRow)
             
-            newRow.append(tdTitle, tdOverall, tdDifferentiation, tdViability, tdFeasability, tdImpact)
+            newRow.append(tdTitle, tdOverall, tdDifferentiation, tdViability, tdFeasability, tdImpact, tdVotes)
 
     }
     writting = false;
