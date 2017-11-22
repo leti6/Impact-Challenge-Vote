@@ -55,7 +55,7 @@ async function createTab (data){
 
     for(let projectKey in projects){
         const moyennes = moyenneVotesProjet(projects[projectKey]);
-        const infoProject = await firebase.database().ref('/demo/projects/' + projectKey + '/title').once('value');
+        const infoProject = await firebase.database().ref('/demo/projects/' + projectKey + '/title').orderByChild('Overall_Rating').once('value');
         const titre = infoProject.val();
         const namesSet = getNames(projects[projectKey]);
 

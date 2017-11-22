@@ -11,11 +11,32 @@ const nameInput = $("#name-input");
 const saveBtn = $("#save-btn");
 const resetBtn = $("#reset-name");
 
+let oldRef = null;
+
+function checkSelected(data){
+  if(data && data.val()){
+    const projects = Object.keys(data.val());
+    for(let projectId of projects){
+      const projectDiv = $('#fb' + projectId);
+      console.log(projectDiv);
+      console.log('id', '#fb' + projectId);
+      projectDiv.css('background-color', 'green');
+    }
+    return;
+  }
+  console.log('no data for ' + localStorage.getItem('name'));
+}
+
 if (localStorage.getItem("name")) {
   name = localStorage.getItem("name");
   nameForm.hide();
   nameText.show();
   nameParagraph.text(name);
+  if(oldRef){
+    oldRef.off();
+  }
+  oldRef = firebase.database().ref('/demo/juges/' + name);
+  oldRef.on('value', checkSelected);
 }
 
 function resetName() {
@@ -36,6 +57,12 @@ function handleSaveName() {
   nameText.show();
   nameParagraph.text(value);
   localStorage.setItem("name", value);
+
+  if(oldRef){
+    oldRef.off();
+  }
+  oldRef = firebase.database().ref('/demo/juges' + value);
+  oldRef.on('value', checkSelected);
 }
 
 saveBtn.click(handleSaveName);
@@ -82,7 +109,6 @@ function showAllProjects(data) {
   const container = $("<div>");
   for (let key in data.val()) {
     console.log("firebase data", data.val()[key].description);
-
     const div = $("<div>").addClass("box-project");
     const boxTitle = $("<h2>").addClass("box-title");
     const newPDescription = $("<p>").addClass("box-description");
@@ -100,7 +126,7 @@ function showAllProjects(data) {
 
     container.append(div);
 
-    div.prop("id", key);
+    div.prop("id", 'fb' + key);
 
     div.append(boxTitle, newPDescription, newPTeam, CreaVoteButton);
 
